@@ -6,9 +6,9 @@
     <title>User Registration Form</title>
     <style>
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
         font-family: Arial, sans-serif;
       }
 
@@ -24,6 +24,7 @@
         width: 550px;
         background-color: #fff;
         padding: 20px;
+        margin-top: 200px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
@@ -59,12 +60,31 @@
       }
 
       form .terms {
-        display: flex;
-        align-items: center;
+        /* display: flex; */
+        /* align-items: center; */
+        /* background-color: red; */
+        /* background-color: blue; */
       }
 
       form .terms input {
-        margin-right: 10px;
+        /* margin-right: 10px; */
+        /* background-color: blue; */
+      }
+      .box {
+        border-top: 1px solid rgb(254, 187, 187);
+        border-bottom: 1px solid red;
+        border-left: 1px solid red;
+        border-right: 1px solid red;
+      }
+      
+      .box-1 {
+        border: 1px solid rgb(117, 255, 119);
+        /* border: 1px solid red; */
+      }
+
+      .agree {
+        /* background-color: red !important; */
+        margin-left: -235px;
       }
 
       form .terms a {
@@ -73,7 +93,7 @@
       }
 
       form .terms a:hover {
-        text-decoration: underline;
+        /* text-decoration: underline; */
       }
 
       form .buttons {
@@ -93,11 +113,11 @@
       }
 
       form .buttons button[type="reset"] {
-        background-color: #6c757d;
+        /* background-color: #6c757d; */
       }
 
       form .buttons button:hover {
-        opacity: 0.9;
+        /* opacity: 0.9; */
       }
     </style>
   </head>
@@ -107,7 +127,8 @@
         <h2>User Registration Form</h2>
 
         <label for="fullname">Full Name:</label>
-        <input
+        <input 
+          class="box"
           type="text"
           id="fullname"
           name="fullname"
@@ -117,6 +138,7 @@
 
         <label for="email">Email Address:</label>
         <input
+          class="box"
           type="email"
           id="email"
           name="email"
@@ -126,6 +148,7 @@
 
         <label for="password">Password:</label>
         <input
+        class="box"
           type="password"
           id="password"
           name="password"
@@ -135,6 +158,7 @@
 
         <label for="confirm_password">Confirm Password:</label>
         <input
+        class="box"
           type="password"
           id="confirm_password"
           name="confirm_password"
@@ -143,27 +167,28 @@
         />
 
         <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" required />
+        <input type="date" class="box" id="dob" name="dob" required />
 
         <label for="profile_picture">Profile Picture:</label>
-        <input type="file" id="profile_picture" name="profile_picture" />
+        <input type="file" class="box" id="profile_picture" name="profile_picture" />
 
         <label for="comments">Comments/Feedback:</label>
         <textarea
+        class="box-1"
           id="comments"
           name="comments"
           placeholder="Leave your comments here"
         ></textarea>
 
         <label for="newsletter">Newsletter Subscription:</label>
-        <select id="newsletter" name="newsletter">
+        <select id="newsletter"  class="box-1"name="newsletter">
           <option value="weekly">Weekly</option>
           <option value="monthly" selected>Monthly</option>
           <option value="yearly">Yearly</option>
         </select>
 
         <div class="terms">
-          <input type="checkbox" id="agree" name="agree" required />
+          <input type="checkbox" class="agree" name="agree" required />
           <label for="agree"
             >I agree to the <a href="#">Terms and Conditions</a></label
           >
