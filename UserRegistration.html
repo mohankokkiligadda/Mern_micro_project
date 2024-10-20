@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration Form</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 550px;
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 200px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      form input,
+      form select,
+      form textarea {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      form input[type="file"] {
+        padding: 3px;
+      }
+
+      form textarea {
+        height: 80px;
+        resize: none;
+      }
+
+     
+      
+      .box {
+        border-top: 1px solid rgb(254, 187, 187);
+        border-bottom: 1px solid red;
+        border-left: 1px solid red;
+        border-right: 1px solid red;
+      }
+
+      .box-1 {
+        border: 1px solid rgb(117, 255, 119);
+      }
+
+      .agree {
+        margin-left: -235px;
+      }
+
+      form .terms a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      form .buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      form .buttons button {
+        width: 48%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #007bff;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#" method="post">
+        <h2>User Registration Form</h2>
+
+        <label for="fullname">Full Name:</label>
+        <input
+          class="box"
+          type="text"
+          id="fullname"
+          name="fullname"
+          placeholder="Enter your full name"
+          required
+        />
+
+        <label for="email">Email Address:</label>
+        <input
+          class="box"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          class="box"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter a password"
+          required
+        />
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input
+          class="box"
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+          placeholder="Re-enter password"
+          required
+        />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" class="box" id="dob" name="dob" required />
+
+        <label for="profile_picture">Profile Picture:</label>
+        <input
+          type="file"
+          class="box"
+          id="profile_picture"
+          name="profile_picture"
+        />
+
+        <label for="comments">Comments/Feedback:</label>
+        <textarea
+          class="box-1"
+          id="comments"
+          name="comments"
+          placeholder="Leave your comments here"
+        ></textarea>
+
+        <label for="newsletter">Newsletter Subscription:</label>
+        <select id="newsletter" class="box-1" name="newsletter">
+          <option value="weekly">Weekly</option>
+          <option value="monthly" selected>Monthly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+
+        <div class="terms">
+          <input type="checkbox" class="agree" name="agree" required />
+          <label for="agree"
+            >I agree to the <a href="#">Terms and Conditions</a></label
+          >
+        </div>
+
+        <div class="buttons">
+          <button type="submit">Register</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
